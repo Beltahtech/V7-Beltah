@@ -426,7 +426,7 @@ function mybotpic() {
                                         id: ms.key.id,
                                         participant: auteurMessage
                                     };
-                                    var txt = "lien detected, \n";
+                                    var txt = "link detected!!! , \n";
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
@@ -444,7 +444,7 @@ function mybotpic() {
 
                                       if (action === 'remove') {
 
-                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} removed from group.\n\n> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇`;
+                                        txt += `message deleted \n @${auteurMessage.split("@")[0]} has been removed from group by Beltah.\n\n> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇`;
 
                                     await zk.sendMessage(origineMessage, { sticker: fs.readFileSync("st1.webp") });
                                     (0, baileys_1.delay)(800);
@@ -848,18 +848,14 @@ zk.ev.on('group-participants.update', async (group) => {
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
 
-                let cmsg =`❒ ❒⁠ ⁠⁠⁠⁠𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃 𝐈𝐒 𝐎𝐍𝐋𝐈𝐍𝐄 ❒ ⁠⁠⁠⁠❒⁠⁠⁠⁠
-╭─────────❒⁠⁠⁠⁠              
-> Prefix   : [ ${prefixe} ]   
-> Mode   : ${md}
-> Plugins  : ${evt.cm.length} 
-> Ram   : 129.99GB
-> Platform : Chrome linux
-> Owner  : Beltah Ke
-╰─────────❒${readmore}
- 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇
-> Type [  ${prefixe}  Channel ] and follow our official *BELTAH-MD* channel . To get latest updates on this BOT.
- ⁠⁠╰─────────────────❒`;
+                let cmsg =`*BELTAH-MD-V7 HAS STARTED...*
+ 
+   Prefix : [ ${prefixe} ]   
+   MODE : ${md} mode
+   Plugins : 245
+   Owner  : Beltah Tech 254 🇰🇪
+
+> Thank you for loving BELTAH-MD.`;
 
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
@@ -881,7 +877,7 @@ zk.ev.on('group-participants.update', async (group) => {
                     console.log('connexion réplacée ,,, une sesssion est déjà ouverte veuillez la fermer svp !!!');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.loggedOut) {
-                    console.log('vous êtes déconnecté,,, veuillez rescanner le code qr svp');
+                    console.log('beltahmd bot disconnected, rescan and upload new session Id.');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.restartRequired) {
                     console.log('redémarrage en cours ▶️');
