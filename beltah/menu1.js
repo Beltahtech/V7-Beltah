@@ -8,7 +8,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "menu1", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
@@ -34,26 +34,42 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-*${s.BOT} AVAILABLE MENUS* 
-╭─────────────────✣
-│❒⁠⁠⁠⁠╭─────────────✣
-│❒⁠⁠⁠⁠│▸ *MENU1* 
-│❒⁠⁠⁠⁠│▸ *MENU2* 
-│❒⁠⁠⁠⁠│▸ *MENU3*
-│❒⁠⁠⁠⁠╰──────────────✇
-│❒⁠⁠⁠⁠│▸ *PLUGINS* : ${cm.length} 
-│❒⁠⁠⁠⁠│▸ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│❒⁠⁠⁠⁠│▸ *SAVER* : ${os.platform()}
-│❒⁠⁠⁠⁠│▸ *THEME* : *BELTAH KE*
-│❒⁠⁠⁠⁠╰──────────────✇
-╰──────────────────✇
-> 𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃 𝐕𝟒.𝟎.𝟎 𝐋𝐀𝐓𝐄𝐒𝐓
+╔════ ▓ ${s.BOT} ▓ ═════╗            
+│▓╔══════════════╗
+│▓│▸ *OWNER* : BELTAH TECH 
+│▓│▸ *USER* : ${nomAuteurMessage} 
+│▓╚══════════════╝
+│▓╔══════════════╗
+│▓│▸ *DATE* : ${date}
+│▓│▸ *PREFIX* : ${s.PREFIXE}
+│▓│▸ *MODE* : ${mode} mode
+│▓│▸ *COMMANDS* : 245
+│▓╚══════════════╝
+╚══════ ▓▓ ࿇ ▓▓ ═══════╝
+> BELTAH-MD-V7 lite version
 > 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇\n${readmore}`;
     
 let menuMsg = `
-> Hello ${nomAuteurMessage},,, Type menu1,menu2 or menu3 to access a list of commands. 
-  
-╰───────────────────⏣`;
+╔════ ▓▓ ࿇ ▓▓ ════╗
+     *LIST OF COMMANDS*
+   ╚═══════════╝
+`;
+
+    for (const cat in coms) {
+        menuMsg += `╔═│ *${cat}*│═╗ `;
+        for (const cmd of coms[cat]) {
+            menuMsg += `
+|▓| ${cmd}`;
+        }
+        menuMsg += `
+╚═════ ▓▓ ࿇ ▓▓ ═════╝\n`
+    }
+
+    menuMsg += `
+    ╔════════╗
+    > 𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃
+    ╚═════ ▓▓ ࿇ ▓▓ ═════╝
+`;
 
    var lien = mybotpic();
 
@@ -82,4 +98,4 @@ else {
     
 }
 
-}); 
+});
