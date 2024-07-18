@@ -40,7 +40,7 @@
 [`PAIRING CODE`](https://beltah-pairing-cd08d1694a1f.herokuapp.com/pair)
 
 ## 3.DEPLOY BELTAH-MD-V7
-(No BAN. 100% safe) 
+(Not safe) 
 <h1 align="center">
  
  ***[![DEPLOY NOW ON HEROKU](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/Devbeltah/V7-Beltah&template=https://github.com/Devbeltah/V7-Beltah.git)***
