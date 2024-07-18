@@ -34,39 +34,40 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭────《《  ${s.BOT} 》》─────✣
-│☹︎╭─────────────✣
-│☹︎│▸ *BOT-OWNER* : ${s.OWNER_NAME}
-│☹︎│▸ *COMMANDER* : ${nomAuteurMessage} 
-│☹︎╰──────────────✇
-│☹︎│▸ *TODAY* : ${date}
-│☹︎│▸ *PREFIX* : ${s.PREFIXE}
-│☹︎│▸ *WORKTYPE* : ${mode} mode
-│☹︎│▸ *PLUGINS* : ${cm.length} 
-│☹︎│▸ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│☹︎│▸ *RUNNING ON* : ${os.platform()}
-│☹︎│▸ *THEME* : *BELTAH KE*
-│☹︎╰──────────────✇
-╰──────────────────✇
-> 𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃 𝐕𝟒.𝟎.𝟎 𝐋𝐀𝐓𝐄𝐒𝐓
+╔════ ▓ ${s.BOT} ▓ ════╗            
+│▓╔══════════════╗
+│▓│▸ *OWNER* : 𝐁𝐞𝐥𝐭𝐚𝐡 𝐓𝐞𝐜𝐡
+│▓│▸ *USER* : ${nomAuteurMessage} 
+│▓╚══════════════╝
+│▓╔══════════════╗
+│▓│▸ *DATE* : ${date}
+│▓│▸ *PREFIX* : ${s.PREFIXE}
+│▓│▸ *MODE* : ${mode} mode
+│▓│▸ *COMMANDS* : 245
+│▓╚══════════════╝
+╚═════ ▓▓ ࿇ ▓▓ ═════╝
+> BELTAH-MD-V7 lite version
 > 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇\n${readmore}`;
     
 let menuMsg = `
-
- *❄︎LIST PLUGINS❄︎*${readmore}
+╔════ ▓▓ ࿇ ▓▓ ════╗
+   *BELTAH-MD-V7 COMMANDS*
 `;
 
     for (const cat in coms) {
-        menuMsg += ` ╭──────✣ *${cat}* ✣─────☹︎`;
+        menuMsg += `╔═│ *${cat}*│═╗ `;
         for (const cmd of coms[cat]) {
             menuMsg += `
-│✇│ ${cmd}`;
+|▓| ${cmd}`;
         }
         menuMsg += `
-╰────────────···▸▸ \n`
+╚═════ ▓▓ ࿇ ▓▓ ═════╝\n`
     }
 
-    menuMsg += `> 𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃 𝐕𝟒.𝟎.𝟎 𝐋𝐀𝐓𝐄𝐒𝐓
+    menuMsg += `
+╔═══════
+> 𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃 © 𝐁𝐞𝐥𝐭𝐚𝐡 𝐓𝐞𝐜𝐡 𝟐𝟓𝟒🇰🇪
+╚═════ ▓▓ ࿇ ▓▓ ═════╝
 `;
 
    var lien = mybotpic();
